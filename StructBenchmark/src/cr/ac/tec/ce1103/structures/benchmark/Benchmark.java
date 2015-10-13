@@ -1,5 +1,7 @@
 package cr.ac.tec.ce1103.structures.benchmark;
 
+import java.util.Scanner;
+
 import cr.ac.tec.ce1103.structures.list.ListaDoble;
 import cr.ac.tec.ce1103.structures.list.ListaSimple;
 import cr.ac.tec.ce1103.structures.sort.BubbleSort;
@@ -8,8 +10,25 @@ import cr.ac.tec.ce1103.structures.sort.SelectionSort;
 public class Benchmark {
 
 	public static void main(String[] args) {
-		System.out.println("Bienvenido a ");
-		
+		Scanner entrada=new Scanner(System.in);
+		System.out.println("Welcome to Benchmark Structures");
+		System.out.println("¿Which data structure do you want to try?");
+		System.out.println("1-Lists\n2-Search\n3-Sort\n4-Trees\n5-Compare two structures");
+		int eleccion=entrada.nextInt();
+		switch(eleccion){
+		case 1:
+			System.out.println("¿Which type of list do you want to try?");
+			Scanner entrada_listas=new Scanner(System.in);
+			System.out.println("1-Linked Lists\n2-Double Linked Lists");
+			int eleccion_listas=entrada_listas.nextInt();
+			switch(eleccion_listas){
+			case 1:
+				System.out.print("Hola");
+			case 2:
+			}
+			
+			
+		}
 		
 		
 		
