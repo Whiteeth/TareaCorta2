@@ -62,7 +62,8 @@ public class QuickSort {
 		  
 		 }
 		public static void main(String arv[]){
-			int []array={100,2,4,5,6,4};
+		int []array={120,2,3,4,56,1,0,0};
+		
 			
 			QuickSort qs= new QuickSort();
 			qs.ordenarAlgoritmo(array);
