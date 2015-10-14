@@ -118,4 +118,42 @@ public class ArbolAVL {
 			}
 			return nuevoPadre;
 		}
+		
+		//Método insertar 
+		public void insertar (int d){
+			NodoArbolAVL nuevo = new NodoArbolAVL(d);
+			if (raiz==null){
+				raiz=nuevo;
+			}
+			else{
+				raiz=insertarAVL(nuevo,raiz);
+			}
+		}
+		
+		//Método para recorrer el árbol InOrden
+		public void inOrden(NodoArbolAVL r){
+			if(r!=null){
+				inOrden(r.hijoIzquierdo);
+				System.out.println(r.dato+", ");
+				inOrden(r.hijoDerecho);
+			}
+		}
+		
+		//Método para recorrer el árbol en preOrden
+		public void preOrden (NodoArbolAVL r){
+			if (r!=null){
+				System.out.println(r.dato + ", ");
+				preOrden(r.hijoIzquierdo);
+				preOrden(r.hijoDerecho);
+			}
+		}
+		
+		//Método para recorrer el árbol en postOrden
+		public void  postOrden (NodoArbolAVL r){
+			if (r!=null){
+				postOrden(r.hijoIzquierdo);
+				postOrden(r.hijoDerecho);
+				System.out.println(r.dato+", ");
+			}
+		}
 }
