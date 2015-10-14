@@ -32,6 +32,10 @@ public class ArbolAVL {
 		}
 	}
 	
+	public NodoArbolAVL obtenerRaiz(){
+		return raiz;
+	}
+	
 	//Rotación simple izquierda
 	public NodoArbolAVL rotacionIzquierda(NodoArbolAVL c){
 		NodoArbolAVL auxiliar = c.hijoIzquierdo;

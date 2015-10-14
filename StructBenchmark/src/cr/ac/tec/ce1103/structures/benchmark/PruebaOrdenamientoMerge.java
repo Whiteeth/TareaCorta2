@@ -6,8 +6,8 @@ import cr.ac.tec.ce1103.structures.sort.*;
 public class PruebaOrdenamientoMerge {
 	
 	public static void main(String[] args) {
-		int cantidad=10;
-		int[] arreglo1 = crearArregloRandom (0,100,cantidad);
+		int cantidad=1000;
+		int[] arreglo1 = crearArregloRandom (0,100000,cantidad);
 		mostrarArreglo(arreglo1);
 		System.out.println("\n");
 		long tiempo = promedioOrdenamiento(arreglo1);
