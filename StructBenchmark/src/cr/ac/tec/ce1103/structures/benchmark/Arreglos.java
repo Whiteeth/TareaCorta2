@@ -55,11 +55,5 @@ public class Arreglos {
 		return arreglo2;
 	}
 	
-	//Método que devuelve el tiempo en realizar una operacion
-	public static long promedioTiempo(Integer[] arreglo){
-		BubbleSort bubble=new BubbleSort();
-		long tiempo;
-		tiempo=bubble.burbuja(arreglo, 0, 0, null);
-		return tiempo;
-	}
+
 }

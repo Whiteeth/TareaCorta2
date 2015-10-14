@@ -23,47 +23,47 @@ public class Benchmark {
 		Integer[] arreglo_inverso2=prueba.copiar(arreglo_inverso1);
 		Integer[] arreglo_random1=prueba.crearArregloRandom(1, 100, 100);
 		Integer[] arreglo_random2=prueba.copiar(arreglo_random1);
-		
-		//Probar arreglos ordenados
 		BubbleSort bubble=new BubbleSort();
 		SelectionSort selection= new SelectionSort();
-		System.out.println("Ordenamiento Burbuja");
-		bubble.mostrarArreglo(arreglo_ordenado1);
-		System.out.println();
-		time_start=System.nanoTime();
-		bubble.burbuja(arreglo_ordenado1, 0, 0, null);
-		time_end=System.nanoTime();
-		System.out.println("Tiempo en ordenar un arreglo ordenado, Bubble:"+(time_end-time_start));
 		
-		System.out.println();
-		
-		System.out.println("Ordenamiento de Selección");
-		selection.mostrarArreglo(arreglo_ordenado2);
-		System.out.println();
-		time_start=System.nanoTime();
-		selection.selection(arreglo_ordenado2);
-		time_end=System.nanoTime();
-		System.out.println("Tiempo en ordenar un arreglo ordenado, Seletion:"+(time_end-time_start));
+//		//Probar arreglos ordenados
+//		System.out.println("Ordenamiento Burbuja");
+//		bubble.mostrarArreglo(arreglo_ordenado1);
+//		System.out.println();
+//		time_start=System.nanoTime();
+//		bubble.burbuja(arreglo_ordenado1, 0, 0, null);
+//		time_end=System.nanoTime();
+//		System.out.println("Tiempo en ordenar un arreglo ordenado, Bubble:"+(time_end-time_start));
+//		
+//		System.out.println();
+//		
+//		System.out.println("Ordenamiento de Selección");
+//		selection.mostrarArreglo(arreglo_ordenado2);
+//		System.out.println();
+//		time_start=System.nanoTime();
+//		selection.selection(arreglo_ordenado2);
+//		time_end=System.nanoTime();
+//		System.out.println("Tiempo en ordenar un arreglo ordenado, Seletion:"+(time_end-time_start));
 
 		
 		//Probar arreglos random.
 		System.out.println("Ordenamiento Burbuja");
-		bubble.mostrarArreglo(arreglo_ordenado1);
+		bubble.mostrarArreglo(arreglo_random1);
 		System.out.println();
 		time_start=System.nanoTime();
-		bubble.burbuja(arreglo_ordenado1, 0, 0, null);
+		bubble.burbuja(arreglo_random1, 0, 0, null);
 		time_end=System.nanoTime();
-		System.out.println("Tiempo en ordenar un arreglo ordenado, Bubble:"+(time_end-time_start));
+		System.out.println("Tiempo en ordenar un arreglo random, Bubble:"+(time_end-time_start));
 		
 		System.out.println();
 		
 		System.out.println("Ordenamiento de Selección");
-		selection.mostrarArreglo(arreglo_ordenado2);
+		selection.mostrarArreglo(arreglo_random2);
 		System.out.println();
 		time_start=System.nanoTime();
-		selection.selection(arreglo_ordenado2);
+		selection.selection(arreglo_random2);
 		time_end=System.nanoTime();
-		System.out.println("Tiempo en ordenar un arreglo ordenado, Seletion:"+(time_end-time_start));
+		System.out.println("Tiempo en ordenar un arreglo random, Seletion:"+(time_end-time_start));
 		
 		
 		
