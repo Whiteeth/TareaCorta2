@@ -10,11 +10,14 @@ import java.util.*;
  *
  */
 public class QuickSort {
+	long tiempo_start,tiempo_end;
+	
 	
 
 
 
-	public  void  ordenarAlgoritmo(int [] arreglo){
+	public void    ordenarAlgoritmo(int [] arreglo){
+		tiempo_start=System.nanoTime();
 		arreglo= quick1(arreglo);
 		
 	}
@@ -58,15 +61,23 @@ public class QuickSort {
 			    }
 			else
 			  return arreglo;
+		 tiempo_end=System.nanoTime();
 		  return arreglo;
 		  
+		
 		 }
+		 public long  tiempo(){
+			 return tiempo_start-tiempo_end;
+			 
+		 }
+		 
 		public static void main(String arv[]){
-		int []array={120,2,3,4,56,1,0,0};
+		int []array={1000,45,622,22,2120,2,3,4,56,1,0,0};
 		
 			
 			QuickSort qs= new QuickSort();
 			qs.ordenarAlgoritmo(array);
+			System.out.println(qs.tiempo());
 			
 			for(int i=0;i< array.length;i++){
 				System.out.println(array[i]);

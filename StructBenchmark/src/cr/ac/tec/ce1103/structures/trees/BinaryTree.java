@@ -3,6 +3,8 @@ package cr.ac.tec.ce1103.structures.trees;
 import java.util.Random;
 
 public class BinaryTree {
+
+	
 	public static class ArbolBinarioOrdenado {
 	    class Nodo
 	      {

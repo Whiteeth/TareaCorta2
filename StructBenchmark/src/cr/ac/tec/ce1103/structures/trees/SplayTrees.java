@@ -9,6 +9,7 @@ package cr.ac.tec.ce1103.structures.trees;
  */
 public class SplayTrees {
 	
+	long tinicioInsert,tfinInsert,tinicioborrado,tfinborrado, iniciobusqueda,finbusqueda;
 //se  declara un nodo privado  para que no haya  acceso  sino  es por los metodos
 	  private NodeSplayTrees  root;
 	     private int count = 0;
@@ -34,6 +35,8 @@ public class SplayTrees {
 	     /** function to insert element */
 	     public void insert(int ele)
 	     {
+	    	 tinicioInsert=System.nanoTime();
+	    	 
 	    	 NodeSplayTrees  z = root;
 	         NodeSplayTrees  p = null;
 	         while (z != null)
@@ -55,6 +58,7 @@ public class SplayTrees {
 	             p.left = z;
 	         Splay(z);
 	         count++;
+	     tfinInsert= System.nanoTime();
 	     }
 	     /** rotate a la  izquierda **/
 	     public void makeLeftChildParent(NodeSplayTrees c, NodeSplayTrees p)
@@ -149,8 +153,10 @@ public class SplayTrees {
 	     /** function to remove element **/
 	     public void remove(int ele)
 	     {
+	    	 tinicioborrado=System.nanoTime();
 	    	 NodeSplayTrees  node = findNode(ele);
 	        remove(node);
+	     tfinborrado=System.nanoTime();
 	     }
 	 
 	     /** function to remove node **/
@@ -200,11 +206,16 @@ public class SplayTrees {
 	 
 	     /** Functions to search for an element **/
 	     public boolean search(int val)
+	     
 	     {
+	     
 	         return findNode(val) != null;
-	     }
+	     
+	         
+	         }
+	     
 	     private NodeSplayTrees findNode(int ele)
-	     {
+	     {iniciobusqueda=System.nanoTime();
 	    	 NodeSplayTrees  z = root;
 	         while (z != null)
 	         {
@@ -215,6 +226,7 @@ public class SplayTrees {
 	             else
 	                 return z;
 	         }
+	         finbusqueda=System.nanoTime();
 	         return null;
 	     }
 	 
@@ -262,7 +274,29 @@ public class SplayTrees {
 	             System.out.print(r.element +" ");
 	         }
 	     }     
+	 
+public long tiempoInsercion(){
+	return tfinInsert-tinicioInsert;
+	
+	
+}
+public  long tiempoBorrado(){
+	return (tinicioborrado-tfinborrado);
+	}
+public long tiempoBusqueda(){
+	return iniciobusqueda-finbusqueda;
+}
+
+ public  static void main(String arv[]){
+	 SplayTrees st= new SplayTrees();
+	 
+	 for(int i=1000; i>1; i--){
+		 st.insert(i);	 
 	 }
+	 
+	 System.out.println(st.tiempoInsercion());
+	 
+ }}
 
 
 
