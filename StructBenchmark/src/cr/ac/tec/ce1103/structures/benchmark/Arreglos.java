@@ -5,17 +5,8 @@ import java.util.Random;
 import cr.ac.tec.ce1103.structures.list.ListaDoble;
 import cr.ac.tec.ce1103.structures.sort.BubbleSort;;
 
-public class PruebaOrdenamientos {
+public class Arreglos {
 
-	public static void main(String[] args) {
-		int cantidad=10;
-		Integer[] arreglo_ordenado=new Integer[cantidad];
-		Integer[] arreglo2_ordenado=copiar(arreglo_ordenado);
-		long tiempo=promedioTiempo(arreglo_ordenado);
-
-		
-	}
-	
 	//Método para crear arreglo random
 	public static Integer[] crearArregloRandom(int desde,int hasta,int tamaño){
 		Integer[] numeros = new Integer[tamaño];
