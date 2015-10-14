@@ -4,6 +4,11 @@ import java.util.Random;
 
 public class PruebaOrdenamientos {
 
+	public static void main(String[] args) {
+		
+		
+	}
+	
 	//Método para crear arreglo random
 	public static Integer[] crearArregloRandom(int desde,int hasta,int tamaño){
 		Integer[] numeros = new Integer[tamaño];
