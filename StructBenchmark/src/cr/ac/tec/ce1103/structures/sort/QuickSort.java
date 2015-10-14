@@ -62,7 +62,7 @@ public class QuickSort {
 		  
 		 }
 		public static void main(String arv[]){
-		int []array={10,2,3,4,56,1,0,0};
+		int []array={120,2,3,4,56,1,0,0};
 		
 			
 			QuickSort qs= new QuickSort();
