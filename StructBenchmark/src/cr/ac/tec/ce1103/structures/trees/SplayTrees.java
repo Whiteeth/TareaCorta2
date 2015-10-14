@@ -9,7 +9,7 @@ package cr.ac.tec.ce1103.structures.trees;
  */
 public class SplayTrees {
 	
-
+//se  declara un nodo privado  para que no haya  acceso  sino  es por los metodos
 	  private NodeSplayTrees  root;
 	     private int count = 0;
 	 
