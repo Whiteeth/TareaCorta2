@@ -2,10 +2,17 @@ package cr.ac.tec.ce1103.structures.benchmark;
 
 import java.util.Random;
 
+import cr.ac.tec.ce1103.structures.list.ListaDoble;
+import cr.ac.tec.ce1103.structures.sort.BubbleSort;;
+
 public class PruebaOrdenamientos {
 
 	public static void main(String[] args) {
-		
+		int cantidad=10;
+		Integer[] arreglo_ordenado=new Integer[cantidad];
+		Integer[] arreglo2_ordenado=copiar(arreglo_ordenado);
+		long tiempo=promedioTiempo(arreglo_ordenado);
+
 		
 	}
 	
@@ -57,5 +64,11 @@ public class PruebaOrdenamientos {
 		return arreglo2;
 	}
 	
-	
+	//Método que devuelve el tiempo en realizar una operacion
+	public static long promedioTiempo(Integer[] arreglo){
+		BubbleSort bubble=new BubbleSort();
+		long tiempo;
+		tiempo=bubble.burbuja(arreglo, 0, 0, null);
+		return tiempo;
+	}
 }

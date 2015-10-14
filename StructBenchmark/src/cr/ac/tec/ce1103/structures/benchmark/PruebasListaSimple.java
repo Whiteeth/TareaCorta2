@@ -16,14 +16,14 @@ public class PruebasListaSimple {
 		
 	}
 
-	
+	//Método para crear una lista
 	public static ListaDoble hacerListaSimple(int cantidad,ListaDoble lista_doble){
 		for(int i=1;i!=cantidad+1;i++){
 			lista_doble.agregarInicio(i);
 		}
 		return lista_doble;
 	}
-	
+	//Método que devuelve el tiempo en realizar una operacion
 	public static long promedioBusqueda(ListaDoble lista_doble,int elemento){
 		long time_start,time_end;
 		time_start=System.nanoTime();
@@ -33,17 +33,3 @@ public class PruebasListaSimple {
 	}
 
 }
-//Con esto creo un arreglo con elementos random
-//Random arreglo = new Random ();
-// for (int i = 0; i < promedio.length; i++){
-//	 int n  = arreglo.nextInt(1001);
-//	 promedio[i]=n;
-// }
-//----------------------------------------------//
-
-//Con esto creo un arreglo invertido
-//for (int i = 0; i < peor.length; i++){
-//	 peor[i]=peor.length-i;
-//}
-//----------------------------------------------//
- 
