@@ -1,33 +1,33 @@
 package cr.ac.tec.ce1103.structures.benchmark;
 
-import cr.ac.tec.ce1103.structures.list.ListaSimple;
+import cr.ac.tec.ce1103.structures.list.ListaDoble;
 
 public class PruebasListaSimple {
 
 	public static void main(String[] args) {
 		int cantidad=10000;
-		ListaSimple lista_simple=new ListaSimple();
-		lista_simple=hacerListaSimple(cantidad,lista_simple); //creacion de lista
-		System.out.print(lista_simple.printAll());
+		ListaDoble lista_doble=new ListaDoble();
+		lista_doble=hacerListaSimple(cantidad,lista_doble); //creacion de lista
+		System.out.print(lista_doble.mostrarInicioFin());
 		
-		long tiempo=promedioBusqueda(lista_simple,1);
+		long tiempo=promedioBusqueda(lista_doble,1);
 		System.out.println("Tiempo en buscar el 5:\n"+tiempo);
 
 		
 	}
 
 	
-	public static ListaSimple hacerListaSimple(int cantidad,ListaSimple lista_simple){
+	public static ListaDoble hacerListaSimple(int cantidad,ListaDoble lista_doble){
 		for(int i=1;i!=cantidad+1;i++){
-			lista_simple.agregarInicio(i);
+			lista_doble.agregarInicio(i);
 		}
-		return lista_simple;
+		return lista_doble;
 	}
 	
-	public static long promedioBusqueda(ListaSimple lista_simple,int elemento){
+	public static long promedioBusqueda(ListaDoble lista_doble,int elemento){
 		long time_start,time_end;
 		time_start=System.nanoTime();
-		lista_simple.agregarFinal(elemento);
+		lista_doble.borrarInicio();
 		time_end=System.nanoTime();
 		return time_end-time_start;
 	}
