@@ -6,7 +6,7 @@ package cr.ac.tec.ce1103.structures.trees;
 /**
  * @author Jonathan Garcia
  *
- *cdddd/
+ */
 public class SplayTrees {
 	
 
@@ -14,7 +14,7 @@ public class SplayTrees {
 	     private int count = 0;
 	 
 	     /** Constructor **/
-	     public SplayTrees()
+	 public SplayTrees()
 	     {
 	         root = null;
 	     }
@@ -56,7 +56,7 @@ public class SplayTrees {
 	         Splay(z);
 	         count++;
 	     }
-	     /** rotate **/
+	     /** rotate a la  izquierda **/
 	     public void makeLeftChildParent(NodeSplayTrees c, NodeSplayTrees p)
 	     {
 	         if ((c == null) || (p == null) || (p.left != c) || (c.parent != p))
@@ -78,6 +78,7 @@ public class SplayTrees {
 	         c.right = p;
 	     }
 	 
+	     //metodos  para  que se  realice  la rotacion
 	     /** rotate **/
 	     public void makeRightChildParent(NodeSplayTrees c, NodeSplayTrees p)
 	     {
