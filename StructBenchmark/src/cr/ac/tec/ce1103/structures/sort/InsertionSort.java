@@ -6,12 +6,10 @@ public class InsertionSort {
 	public static class MyInsertionSort {
 		 
 	    public static void main(String[] args) {
-	    	long startTime = System.nanoTime();
-
 	    	int[]mejor = new int [1000];
 	    	int[]peor = new int [1000];
 	    	int[]promedio = new int [1000];
-	    	//Con esto creo un arreglo con elementos random
+	    	//Con esto se crea un arreglo con elementos random
 	    	Random arreglo = new Random ();
 			 for (int i = 0; i < promedio.length; i++){
 				 int n  = arreglo.nextInt(1001);
@@ -19,16 +17,35 @@ public class InsertionSort {
 			 }
 			//----------------------------------------------//
 			 
-			//Con esto creo un arreglo invertido
+			//Con esto se crea un arreglo invertido
 			 for (int i = 0; i < peor.length; i++){
 				 peor[i]=peor.length-i;
 			 }
 			//----------------------------------------------//
-	        insertionSort(promedio);
-	        insertionSort(peor);
+			 
+			//Con esto se crea un arreglo ordenado
+			 for (int i = 0; i < mejor.length; i++){
+				 mejor[i]=i+1;
+			 }
+			//----------------------------------------------//
+	        
+	        long startTime = System.nanoTime();
+	        insertionSort(mejor);
 	        long endTime   = System.nanoTime();
 	        long totalTime = (endTime - startTime);
-	        System.out.println(totalTime + " nanosegundos");
+	        System.out.println("Mejor Caso: " +totalTime + " nanosegundos");
+	        
+	        long startTime2 = System.nanoTime();
+	        insertionSort(promedio);
+	        long endTime2   = System.nanoTime();
+	        long totalTime2 = (endTime2 - startTime2);
+	        System.out.println("Caso promedio: "+ totalTime2 + " nanosegundos");
+	        
+	        long startTime3 = System.nanoTime();
+	        insertionSort(peor);
+	        long endTime3   = System.nanoTime();
+	        long totalTime3 = (endTime3 - startTime3);
+	        System.out.println("Peor Caso: " + totalTime3 + " nanosegundos");
 	        
 	    }
 	     

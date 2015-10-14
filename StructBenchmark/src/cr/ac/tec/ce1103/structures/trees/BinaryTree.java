@@ -2,9 +2,6 @@ package cr.ac.tec.ce1103.structures.trees;
 
 import java.util.Random;
 
-import EstructurasJerarquicas.ArbolBinario.ArbolBinarioOrdenado;
-import EstructurasJerarquicas.ArbolBinario.ArbolBinarioOrdenado.Nodo;
-
 public class BinaryTree {
 	public static class ArbolBinarioOrdenado {
 	    class Nodo
@@ -107,16 +104,7 @@ public class BinaryTree {
 	        	  abo.insertar(n);
 	        	  
 	          }
-//	          abo.insertar (40);
-//	          abo.insertar (20);
-//	          abo.insertar (60);
-//	          abo.insertar (10);
-//	          abo.insertar (30);
-//	          abo.insertar (50);
-//	          abo.insertar (70);
-//	          abo.insertar (45);
-//	          abo.insertar (55);
-//	          abo.insertar (54);
+
 	          long startTime = System.nanoTime();
 	          abo.insertar (10);
 	          long finalTime = System.nanoTime();
