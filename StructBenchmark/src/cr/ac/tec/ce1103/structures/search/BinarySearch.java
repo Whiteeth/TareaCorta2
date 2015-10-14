@@ -19,12 +19,12 @@ public class BinarySearch {
 		 }
 
 		 public static void main(String []args){
-			 int[]nu = new int [10];
+			 int[]nu = new int [10000];
 			 for (int i = 0; i < nu.length; i++){
 				 nu[i]=i+1;
 			 }
 		  long startTime = System.nanoTime();
-		  System.out.println(busquedaBinaria(nu,10));
+		  System.out.println(busquedaBinaria(nu,10000));
 		  long finalTime = System.nanoTime();
 		  long totalTime = finalTime - startTime;
 		  System.out.println("Peor Caso: " + totalTime + " nanosegundos");
