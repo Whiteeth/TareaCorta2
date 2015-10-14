@@ -2,16 +2,8 @@ package cr.ac.tec.ce1103.structures.benchmark;
 
 import java.util.Random;
 
-public class Arreglos {
+public class PruebaOrdenamientos {
 
-	public static void main(String[] args) {
-	Integer[] arreglo=crearInvertido(100);
-	Integer[] arreglo2=copiar(arreglo);
-	mostrarArreglo(arreglo2);
-		
-	}
-	
-	
 	//Método para crear arreglo random
 	public static Integer[] crearArregloRandom(int desde,int hasta,int tamaño){
 		Integer[] numeros = new Integer[tamaño];
