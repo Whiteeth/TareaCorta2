@@ -46,7 +46,7 @@ public class Benchmark {
 		System.out.println("Tiempo en ordenar un arreglo ordenado, Seletion:"+(time_end-time_start));
 
 		
-		//Probar arreglos random
+		//Probar arreglos random.
 		System.out.println("Ordenamiento Burbuja");
 		bubble.mostrarArreglo(arreglo_ordenado1);
 		System.out.println();
