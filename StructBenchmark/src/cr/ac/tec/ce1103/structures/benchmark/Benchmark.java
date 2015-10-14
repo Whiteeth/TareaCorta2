@@ -10,19 +10,60 @@ import cr.ac.tec.ce1103.structures.sort.SelectionSort;
 public class Benchmark {
 
 	public static void main(String[] args) {
+		long time_start,time_end;
+		time_start=System.nanoTime();
+		time_end=System.nanoTime();
 		
 		//Algoritmo para probar los timpos de los ordenamientos
 		Arreglos prueba =new Arreglos();
-		Integer[] arreglo= prueba.crearArreglo(10);
-		BubbleSort ordenar=new BubbleSort();
-		ordenar.mostrarArreglo(arreglo);
+		int tamaño=1000;
+		Integer[] arreglo_ordenado1= prueba.crearArreglo(tamaño);
+		Integer[] arreglo_ordenado2=prueba.copiar(arreglo_ordenado1);
+		Integer[] arreglo_inverso1=prueba.crearInvertido(tamaño);
+		Integer[] arreglo_inverso2=prueba.copiar(arreglo_inverso1);
+		Integer[] arreglo_random1=prueba.crearArregloRandom(1, 100, 100);
+		Integer[] arreglo_random2=prueba.copiar(arreglo_random1);
+		
+		//Probar arreglos ordenados
+		BubbleSort bubble=new BubbleSort();
+		SelectionSort selection= new SelectionSort();
+		System.out.println("Ordenamiento Burbuja");
+		bubble.mostrarArreglo(arreglo_ordenado1);
 		System.out.println();
-		ordenar.burbuja(arreglo, 0, 0, null);
-		ordenar.mostrarArreglo(arreglo);
+		time_start=System.nanoTime();
+		bubble.burbuja(arreglo_ordenado1, 0, 0, null);
+		time_end=System.nanoTime();
+		System.out.println("Tiempo en ordenar un arreglo ordenado, Bubble:"+(time_end-time_start));
 		
+		System.out.println();
+		
+		System.out.println("Ordenamiento de Selección");
+		selection.mostrarArreglo(arreglo_ordenado2);
+		System.out.println();
+		time_start=System.nanoTime();
+		selection.selection(arreglo_ordenado2);
+		time_end=System.nanoTime();
+		System.out.println("Tiempo en ordenar un arreglo ordenado, Seletion:"+(time_end-time_start));
 
 		
+		//Probar arreglos random
+		System.out.println("Ordenamiento Burbuja");
+		bubble.mostrarArreglo(arreglo_ordenado1);
+		System.out.println();
+		time_start=System.nanoTime();
+		bubble.burbuja(arreglo_ordenado1, 0, 0, null);
+		time_end=System.nanoTime();
+		System.out.println("Tiempo en ordenar un arreglo ordenado, Bubble:"+(time_end-time_start));
 		
+		System.out.println();
+		
+		System.out.println("Ordenamiento de Selección");
+		selection.mostrarArreglo(arreglo_ordenado2);
+		System.out.println();
+		time_start=System.nanoTime();
+		selection.selection(arreglo_ordenado2);
+		time_end=System.nanoTime();
+		System.out.println("Tiempo en ordenar un arreglo ordenado, Seletion:"+(time_end-time_start));
 		
 		
 		
@@ -32,7 +73,7 @@ public class Benchmark {
 		
 		
 
-		//Algoritmo para brobar los timpo de listas
+		//Algoritmo para probar los timpo de listas
 //		int cantidad=10000;
 //		ListaDoble lista_doble=new ListaDoble();
 //		lista_doble=hacerListaSimple(cantidad,lista_doble); //creacion de lista
@@ -54,13 +95,7 @@ public class Benchmark {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
