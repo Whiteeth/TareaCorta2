@@ -10,7 +10,7 @@ import cr.ac.tec.ce1103.structures.sort.SelectionSort;
 public class Benchmark {
 
 	public static void main(String[] args) {
-		PruebaOrdenamientos prueba =new PruebaOrdenamientos();
+		Arreglos prueba =new Arreglos();
 		Integer[] arreglo= prueba.crearArreglo(10);
 		BubbleSort ordenar=new BubbleSort();
 		ordenar.mostrarArreglo(arreglo);
