@@ -18,8 +18,9 @@ public class QuickSort {
 
 	public void    ordenarAlgoritmo(int [] arreglo){
 		
-		arreglo= quick1(arreglo);
 		
+		arreglo= quick1(arreglo);
+		tiempo_start=System.nanoTime();
 	}
 	public  int [] quick1(int[]vec){
 		return quick2(vec,0,vec.length-1);
@@ -27,7 +28,7 @@ public class QuickSort {
 	}
 
 		 public   int  [] quick2(int [] arreglo, int l,int r){
-			 tiempo_start=System.nanoTime();
+			 
 			 int i= l;
 			 int d=r;
 		if (l>=r)
@@ -68,7 +69,7 @@ public class QuickSort {
 		  
 		 }
 		 public long  tiempo(){
-			 return tiempo_end-tiempo_start;
+			 return tiempo_start-tiempo_end;
 			 
 		 }
 		 
