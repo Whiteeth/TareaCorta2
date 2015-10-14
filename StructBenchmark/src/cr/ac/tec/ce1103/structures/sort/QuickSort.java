@@ -17,7 +17,7 @@ public class QuickSort {
 
 
 	public void    ordenarAlgoritmo(int [] arreglo){
-		tiempo_start=System.nanoTime();
+		
 		arreglo= quick1(arreglo);
 		
 	}
@@ -27,6 +27,7 @@ public class QuickSort {
 	}
 
 		 public   int  [] quick2(int [] arreglo, int l,int r){
+			 tiempo_start=System.nanoTime();
 			 int i= l;
 			 int d=r;
 		if (l>=r)
@@ -60,19 +61,19 @@ public class QuickSort {
 				}
 			    }
 			else
+			
 			  return arreglo;
-		 tiempo_end=System.nanoTime();
+			tiempo_end=System.nanoTime();
 		  return arreglo;
 		  
-		
 		 }
 		 public long  tiempo(){
-			 return tiempo_start-tiempo_end;
+			 return tiempo_end-tiempo_start;
 			 
 		 }
 		 
 		public static void main(String arv[]){
-		int []array={1000,45,622,22,2120,2,3,4,56,1,0,0};
+		int []array={1000,45,622,22,2120,2,3,4,56,1,0,0,3,3,4,4,5,3,33,3,345,5,5,5,66,767,66,79,8,2,2,2,2,3,4,5,455,555,55,555,55,55,4447,6,6,5,4,4,3,3,21,88};
 		
 			
 			QuickSort qs= new QuickSort();
