@@ -6,7 +6,7 @@ package cr.ac.tec.ce1103.structures.trees;
 /**
  * @author Jonathan Garcia
  *
- */
+ *cdddd/
 public class SplayTrees {
 	
 
@@ -209,7 +209,7 @@ public class SplayTrees {
 	         {
 	             if (ele < z.element)
 	                 z = z.right;
-	             else if (ele > z.element)
+	             else if (ele  > z.element)
 	                 z = z.left;
 	             else
 	                 return z;
