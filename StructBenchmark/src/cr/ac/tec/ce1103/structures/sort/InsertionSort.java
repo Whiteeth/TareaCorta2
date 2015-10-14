@@ -11,12 +11,21 @@ public class InsertionSort {
 	    	int[]mejor = new int [1000];
 	    	int[]peor = new int [1000];
 	    	int[]promedio = new int [1000];
+	    	//Con esto creo un arreglo con elementos random
 	    	Random arreglo = new Random ();
 			 for (int i = 0; i < promedio.length; i++){
 				 int n  = arreglo.nextInt(1001);
 				 promedio[i]=n;
 			 }
+			//----------------------------------------------//
+			 
+			//Con esto creo un arreglo invertido
+			 for (int i = 0; i < peor.length; i++){
+				 peor[i]=peor.length-i;
+			 }
+			//----------------------------------------------//
 	        insertionSort(promedio);
+	        insertionSort(peor);
 	        long endTime   = System.nanoTime();
 	        long totalTime = (endTime - startTime);
 	        System.out.println(totalTime + " nanosegundos");
@@ -41,7 +50,7 @@ public class InsertionSort {
 	                i--;
 	            }
 	            array[i+1] = key;
-	            printNumbers(array);
+	           // printNumbers(array);
 	        }
 	    }
 	    

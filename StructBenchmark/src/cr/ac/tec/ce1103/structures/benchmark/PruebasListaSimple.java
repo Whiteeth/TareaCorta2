@@ -33,3 +33,17 @@ public class PruebasListaSimple {
 	}
 
 }
+//Con esto creo un arreglo con elementos random
+//Random arreglo = new Random ();
+// for (int i = 0; i < promedio.length; i++){
+//	 int n  = arreglo.nextInt(1001);
+//	 promedio[i]=n;
+// }
+//----------------------------------------------//
+
+//Con esto creo un arreglo invertido
+//for (int i = 0; i < peor.length; i++){
+//	 peor[i]=peor.length-i;
+//}
+//----------------------------------------------//
+ 
